@@ -1,9 +1,12 @@
 
-header{
-    
-}
 
 #container{
     width: 250px;
     margin: 0 auto;
+}
+
+
+.moreInfo{
+    position: absolute;
+    display: none;
 }

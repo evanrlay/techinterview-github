@@ -1,12 +1,47 @@
 
+head, body{
+    margin: 0 auto;
+    background-color: white;
+	color: #000;
+}
+
 
 #container{
-    width: 250px;
     margin: 0 auto;
 }
 
 
 .moreInfo{
-    position: absolute;
     display: none;
+    background-color: rgb(220, 225, 231);
+    margin: 0;
+    padding: 2.5% 5% 2.5% 5%;
+    border-top: 1px solid black;
+}
+
+ul{
+   padding: 0;
+   margin-top: 0;
+   list-style-type: none; 
+}
+
+li{
+    border-top: 1px solid black;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+li p{
+    margin-bottom: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+header{
+    background-color: rgb(224, 241, 255);
 }

@@ -12,17 +12,31 @@ $(document).ready(function() {
             $('#eventList').append("<p id = 'p" + num + "' class = 'moreInfo'> Time Created: " + field.created_at +"</p>");
         });
     });
+
+    var dragging = false;
     
-     $(document).on('click', 'li', function () {
-        var num = this.id.substr(2,3);
-        $('#p' + num).toggle();
+    $("body").on("touchmove", function(){
+     dragging = true;
+    });
+    
+    $("body").on("touchstart", function(){
+    dragging = false;
     });
     
      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
      $(document).on('touchend', 'li', function () {
+        if (dragging)
+         return;
         var num = this.id.substr(2,3);
         $('#p' + num).slideToggle(500);
     });
-     }
+    }
+    else
+    {
+        $(document).on('click', 'li', function () {
+        var num = this.id.substr(2,3);
+        $('#p' + num).slideToggle(500);
+    });
+    }
 });
 

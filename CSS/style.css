@@ -29,9 +29,12 @@ li{
     border-top: 1px solid black;
     padding-left: 7%;
     padding-right: 7%;
+    overflow: auto;
+    margin-bottom: 0;
 }
 
 li p{
+    padding-top: 25px;
     margin-bottom: 0;
 }
 
@@ -44,4 +47,12 @@ h1{
 
 header{
     background-color: rgb(224, 241, 255);
+}
+
+li img{
+    float: right;
+    max-height: 100px;
+    padding: 1%;
+    margin: 0;
+    
 }

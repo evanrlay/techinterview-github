@@ -7,8 +7,8 @@ $(document).ready(function() {
         $.each(result, function(i, field){
             var num = ("0" + (i+1)).slice(-2);
             var arr = field.repo.url.split("/");
-            $("#eventList").append("<li id = 'li" + num + "'><img src = '" + field.actor.avatar_url + "' alt = User Avatar'><p>" + num + ": " + 
-            field.actor.login + "<br>" + field.type + "<br>" + "Repo: " + "<a href= '" + field.repo.url + "'>" + arr[4] + "</a></p></li><br>");
+            $("#eventList").append("<li id = 'li" + num + "'><img src = '" + field.actor.avatar_url + "' alt = User Avatar'><p>" + "User: " + 
+            field.actor.login + "<br>Event: " + field.type + "<br>" + "Repo: " + "<a href= '" + field.repo.url + "'>" + arr[4] + "</a></p></li>");
             $('#eventList').append("<p id = 'p" + num + "' class = 'moreInfo'> Time Created: " + field.created_at +"</p>");
         });
     });

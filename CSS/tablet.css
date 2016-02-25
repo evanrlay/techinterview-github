@@ -1,3 +1,6 @@
+/****************************
+     CSS for Tablets
+*****************************/
 
 head, body{
     margin: 0 auto;
@@ -6,18 +9,46 @@ head, body{
 }
 
 
+/***************
+     Header
+****************/
+
+h1{
+    text-align: center;
+    margin: 0;
+    padding-top: 5%;
+}
+
+header{
+    text-align: center;
+    background-color: rgb(224, 241, 255);
+}
+
+
+button{
+    margin-bottom: 2.5%;
+}
+
+#desktop{
+    display: none;
+}
+
+#mobile{
+        font-size: 1em;    
+        padding-bottom: 2.5%;
+}
+
+
+/***************
+     Body
+****************/
+
+
 #container{
     margin: 0 auto;
 }
 
 
-.moreInfo{
-    display: none;
-    background-color: rgb(220, 225, 231);
-    margin: 0;
-    padding: 2.5% 5% 2.5% 5%;
-    border-top: 1px solid black;
-}
 
 ul{
    padding: 0;
@@ -38,16 +69,7 @@ li p{
     padding-bottom: 2%;
 }
 
-h1{
-    text-align: center;
-    margin: 0;
-    padding-top: 5%;
-}
 
-header{
-    text-align: center;
-    background-color: rgb(224, 241, 255);
-}
 
 li img{
     float: right;
@@ -57,15 +79,13 @@ li img{
     
 }
 
-button{
-    margin-bottom: 2.5%;
-}
 
-#desktop{
+.moreInfo{
     display: none;
+    background-color: rgb(220, 225, 231);
+    margin: 0;
+    padding: 2.5% 5% 2.5% 5%;
+    border-top: 1px solid black;
 }
 
-#mobile{
-        font-size: 1em;    
-        padding-bottom: 2.5%;
-}
+

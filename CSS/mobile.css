@@ -1,3 +1,7 @@
+/****************************
+     CSS for Mobile
+*****************************/
+
 
 head, body{
     margin: 0 auto;
@@ -6,18 +10,45 @@ head, body{
 }
 
 
+
+/***************
+     Header
+****************/
+header{
+    text-align: center;
+    background-color: rgb(224, 241, 255);
+}
+
+li img{
+    float: right;
+    max-height: 100px;
+    padding: 1%;
+    margin: 0;
+    
+}
+
+button{
+    margin-bottom: 2.5%;
+}
+
+#desktop{
+    display: none;
+}
+
+#mobile{
+        font-size: 1em;
+        padding-bottom: 2.5%;
+}
+
+/***************
+     Body
+****************/
+
 #container{
     margin: 0 auto;
 }
 
 
-.moreInfo{
-    display: none;
-    background-color: rgb(220, 225, 231);
-    margin: 0;
-    padding: 2.5% 5% 2.5% 5%;
-    border-top: 1px solid black;
-}
 
 ul{
    padding: 0;
@@ -44,28 +75,10 @@ h1{
     padding-top: 5%;
 }
 
-header{
-    text-align: center;
-    background-color: rgb(224, 241, 255);
-}
-
-li img{
-    float: right;
-    max-height: 100px;
-    padding: 1%;
-    margin: 0;
-    
-}
-
-button{
-    margin-bottom: 2.5%;
-}
-
-#desktop{
+.moreInfo{
     display: none;
-}
-
-#mobile{
-        font-size: 1em;
-        padding-bottom: 2.5%;
+    background-color: rgb(220, 225, 231);
+    margin: 0;
+    padding: 2.5% 5% 2.5% 5%;
+    border-top: 1px solid black;
 }

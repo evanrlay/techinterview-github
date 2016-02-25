@@ -42,10 +42,10 @@ h1{
     text-align: center;
     margin: 0;
     padding-top: 5%;
-    padding-bottom: 5%;
 }
 
 header{
+    text-align: center;
     background-color: rgb(224, 241, 255);
 }
 
@@ -55,4 +55,17 @@ li img{
     padding: 1%;
     margin: 0;
     
+}
+
+button{
+    margin-bottom: 2.5%;
+}
+
+#desktop{
+    display: none;
+}
+
+#mobile{
+        font-size: 1em;    
+        padding-bottom: 2.5%;
 }

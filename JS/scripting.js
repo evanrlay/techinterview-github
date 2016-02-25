@@ -9,10 +9,45 @@ $(document).ready(function() {
             var arr = field.repo.url.split("/");
             $("#eventList").append("<li id = 'li" + num + "'><img src = '" + field.actor.avatar_url + "' alt = User Avatar'><p>" + "User: " + 
             field.actor.login + "<br>Event: " + field.type + "<br>" + "Repo: " + "<a href= '" + field.repo.url + "'>" + arr[4] + "</a></p></li>");
-            $('#eventList').append("<p id = 'p" + num + "' class = 'moreInfo'> Time Created: " + field.created_at +"</p>");
+            var info = "";
+            var added = false;
+            if(field.payload.commits != undefined){
+                if(field.payload.commits[0] != undefined)
+                {
+                    var added = true;
+                    info += ('Message on commit: ' + field.payload.commits[0].message + '<br>');
+                }
+            }
+            
+             if(field.payload.comment != undefined){
+                var added = true;
+                info += ('Comment: ' + field.payload.comment.body + '<br>');
+            }
+            
+             if(field.payload.description != undefined){
+                var added = true;
+                info += ('Event Description: ' + field.payload.description + '<br>');
+            }   
+            
+            if(field.payload.issue != undefined){
+                var added = true;
+                info += ('Issue: ' + field.payload.issue.title  + '<br>');
+            }
+            
+            if(added == false){
+                info = 'For more information about this event, click the repo URL.'
+            }
+            
+            var date = new Date(field.created_at);
+            $('#eventList').append("<p id = 'p" + num + "' class = 'moreInfo'> Time Created: " + date + '<br>' + info + "</p>");
+        
         });
     });
     
+});
+
+$(document).on("click", "button", function(){
+    location.reload(true);
 });
 
 var dragging = false;
